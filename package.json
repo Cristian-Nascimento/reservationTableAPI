@@ -6,43 +6,16 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
-    "coverage": "npm test -- --coverage",
-    "postcoverage": "opn coverage/lcov-report/index.html",
-    "dev": "nodemon -i \"*.test.js\" .",
-    "prod": "cross-env NODE_ENV=production nodemon -i \"*.test.js\" -r dotenv-safe/config .",
-    "lint": "eslint src",
-    "docs": "apidoc -i src -o docs && apidoc-markdown -p docs -o DOCS.md",
-    "postdocs": "open-cli docs/index.html"
+    "dev": "nodemon -i \"*.test.js\" ."
   },
   "engine": {
     "node": "14.x"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/setup.js"
-    ]
-  },
   "devDependencies": {
-    "apidoc": "^0.20.0",
-    "apidoc-markdown": "^0.2.1",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.1.0",
     "cross-env": "^7.0.2",
     "dotenv-safe": "^8.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "jest-cli": "^25.1.0",
     "mongodb-memory-server": "^6.3.3",
-    "nock": "^12.0.2",
-    "nodemon": "^2.0.2",
-    "open-cli": "^6.0.0",
-    "sinon": "^4.0.1",
-    "supertest": "^4.0.2"
+    "nodemon": "^2.0.2"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
