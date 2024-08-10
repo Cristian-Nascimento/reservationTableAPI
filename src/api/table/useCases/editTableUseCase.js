@@ -3,7 +3,7 @@ import Table from '../schemas'
 export const editTableUseCase = async ({ body, id }) => {
   const { tableNumber, hourReservation } = body
 
-  const reservationDate = new Date(hourReservation.getTime() - 3 * 60 * 60 * 1000)
+  const reservationDate = new Date(hourReservation.getTime())
 
   const oneHourBefore = new Date(reservationDate.getTime() - 60 * 60 * 1000)
   const oneHourAfter = new Date(reservationDate.getTime() + 60 * 60 * 1000)
